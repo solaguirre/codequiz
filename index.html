@@ -13,9 +13,50 @@
 
     <!-- Added a link to Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 
 <body>
+    <!-- Added jumbotron, with initial quiz text -->
+    <div id="quiz" class="jumbotron text-center">
+        <div class="container">
+            <h1 class="display-4">Reggaeton, ya tu sabe!</h1>
+            <p class="lead">This quiz will test your knowledge of the latest Reggaetoneros and their songs. </p>
+            <hr class="my-4">
+            <p>Click on the button to start.</p>
+            <a class="btn btn-primary btn-lg" href="#" id="startbutton" role="button">Leggo!</a>
+        </div>
+        <br>
+
+        <main>
+            <div class="row">
+
+                <div class="container">
+                    <h1 id="question"></h1>
+                    <hr>
+                    <!-- buttons -->
+                    <div class="btn-group-vertical" role="group">
+
+                        <button id="button1" type="button" class="btn btn-secondary btn-lg">a</button>
+                        <br>
+                        <button id="button2" type="button" class="btn btn-secondary btn-lg">b</button>
+                        <br>
+                        <button id="button3" type="button" class="btn btn-secondary btn-lg">c</button>
+                        <br>
+                        <button id="button4" type="button" class="btn btn-secondary btn-lg">d</button>
+                    </div>
+
+
+
+                    <div id="results"></div>
+
+                </div>
+                <!-- timer -->
+                <div class="col text-right">
+                    <h4 class="time"></h4>
+                </div>
+        </main>
 
 </body>
 
