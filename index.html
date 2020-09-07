@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quiz</title>
+    <title>Reggaeton Quiz</title>
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,49 +15,59 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="style.css" type="text/css">
+
 </head>
 
 <body>
-    <!-- Added jumbotron, with initial quiz text -->
-    <div id="quiz" class="jumbotron text-center">
+
+    <!-- timer -->
+    </div>
+    <div class="col text-right">
+        <h4 class="time"></h4>
+    </div>
+
+    <!-- Added jumbotron, with initial home text -->
+    <main id="quiz" class="jumbotron text-center">
         <div class="container">
             <h1 class="display-4">Reggaeton, ya tu sabe!</h1>
             <p class="lead">This quiz will test your knowledge of the latest Reggaetoneros and their songs. </p>
             <hr class="my-4">
             <p>Click on the button to start.</p>
-            <a class="btn btn-primary btn-lg" href="#" id="startbutton" role="button">Leggo!</a>
+            <a id="start" class="btn btn-primary btn-lg" role="button">Leggo!</a>
         </div>
         <br>
 
-        <main>
+        <!-- quiz container, should I have it within jumbotron? below, display: none makes it dissapear, how do i make it reappear when quiz starts? -->
+        <div id="quiz-container"></div>
+        <div style="display: none">
             <div class="row">
 
                 <div class="container">
-                    <h1 id="question"></h1>
+                    <h1 id="questions"></h1>
                     <hr>
                     <!-- buttons -->
                     <div class="btn-group-vertical" role="group">
 
-                        <button id="button1" type="button" class="btn btn-secondary btn-lg">a</button>
+                        <button id="buttona" type="button" class="btn btn-secondary btn-lg">a</button>
                         <br>
-                        <button id="button2" type="button" class="btn btn-secondary btn-lg">b</button>
+                        <button id="buttonb" type="button" class="btn btn-secondary btn-lg">b</button>
                         <br>
-                        <button id="button3" type="button" class="btn btn-secondary btn-lg">c</button>
+                        <button id="buttonc" type="button" class="btn btn-secondary btn-lg">c</button>
                         <br>
-                        <button id="button4" type="button" class="btn btn-secondary btn-lg">d</button>
+                        <button id="buttond" type="button" class="btn btn-secondary btn-lg">d</button>
                     </div>
 
 
 
                     <div id="results"></div>
 
-                </div>
-                <!-- timer -->
-                <div class="col text-right">
-                    <h4 class="time"></h4>
-                </div>
-        </main>
 
+                </div>
+            </div>
+    </main>
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
