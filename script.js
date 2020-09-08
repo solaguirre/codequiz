@@ -7,20 +7,16 @@ const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
 const button4 = document.querySelector("#button4");
 const timeEl = document.querySelector(".time");
-const buttons = document.querySelector("#buttons");
+const startButton = document.querySelector("#start");
 const logInitials = document.querySelector("#logInitials");
 
-// Click start button and jumbotron is hidden and replaced with quiz questions...
-
 // Click on a button and quiz starts, timer starts and I am presented with a question
-
-// Generating Quiz fx
-function buildQuiz() {
-
-}
-
-function showResults
-// Timer 
+startButton.addEventListener("click", function () {
+    setTime();
+    document.querySelector("#main-jumbotron").style.display = "none";
+    document.querySelector("#quiz-buttons").removeAttribute("style");
+    nextQuestion();
+})
 
 let secondsLeft = 90;
 
@@ -34,15 +30,16 @@ function setTime(end) {
             clearInterval(timerInterval);
         }
     }, 1000);
+}
+
+console.log(secondsLeft);
+
+function buildQuiz() {
+
     // add another if or if else statement to subtract time?
 
     // if (question)
-};
-
-setTime();
-console.log(secondsLeft);
-
-
+}
 // quizQUESTIONS
 
 let quizQuestions = [
@@ -100,80 +97,77 @@ let quizQuestions = [
     }
 ];
 
-const renderQuizBtn = document.querySelector("#beginQuiz");
-const buttona = document.querySelector("a");
-const buttonb = document.querySelector("b");
-const buttonc = document.querySelector("c");
-const buttond = document.querySelector("d");
+const renderQuizBtn = document.querySelector("#startbutton");
+const buttona = document.querySelector("#buttona");
+const buttonb = document.querySelector("#buttonb");
+const buttonc = document.querySelector("#buttonc");
+const buttond = document.querySelector("#buttond");
 
 let index = 0;
 let currentQuestion = quizQuestions[0];
 
 let renderQuizEl = document.querySelector("#quizQuestions");
 
-function renderQuizQuestion() {
-    renderQuizEl.innerHTML =
+// nextQuestion();
 
 
-        nextQuestion();
+// function to wrap around, to reuse lines of code
 
-
-    // function to wrap around, to reuse lines of code
-
-    function nextQuestion() {
-        currentQuestion = quizQuestions[index]
-        question.textContent = currentQuestion.question;
-        button1.textContent = currentQuestion.answers[0];
-        button2.textContent = currentQuestion.answers[1];
-        button3.textContent = currentQuestion.answers[2];
-        button4.textContent = currentQuestion.answers[3];
-    }
-
-    // Event listeners for clicking answers 
-    button1.addEventListener("click", function (event) {
-        event.preventDefault();
-        if (button1.textContent === currentQuestion.correctAnswer) {
-            alert("Correct");
-        } else {
-            alert("wrong");
-        }
-        index++;
-        nextQuestion();
-    });
-
-    button2.addEventListener("click", function (event) {
-        event.preventDefault();
-        if (button2.textContent === currentQuestion.correctAnswer) {
-            alert("Correct");
-        } else {
-            alert("wrong");
-        }
-        index++;
-        nextQuestion();
-    });
-
-    button3.addEventListener("click", function (event) {
-        event.preventDefault();
-        if (button3.textContent === currentQuestion.correctAnswer) {
-            alert("Correct");
-        } else {
-            alert("wrong");
-        }
-        index++;
-        nextQuestion();
-    });
-
-    button4.addEventListener("click", function (event) {
-        event.preventDefault();
-        if (button4.textContent === currentQuestion.correctAnswer) {
-            alert("Correct");
-        } else {
-            alert("wrong");
-        }
-        index++;
-        nextQuestion();
-    });
+function nextQuestion() {
+    currentQuestion = quizQuestions[index]
+    console.log(currentQuestion.question);
+    questions.textContent = currentQuestion.question;
+    buttona.textContent = currentQuestion.answers.buttona;
+    buttonb.textContent = currentQuestion.answers.buttonb;
+    buttonc.textContent = currentQuestion.answers.buttonc;
+    buttond.textContent = currentQuestion.answers.buttond;
 }
+
+// Event listeners for clicking answers 
+buttona.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (buttona.textContent === currentQuestion.correctAnswer) {
+        alert("Correct");
+    } else {
+        alert("Wrong");
+    }
+    index++;
+    nextQuestion();
+});
+
+buttonb.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (buttonb.textContent === currentQuestion.correctAnswer) {
+        alert("Correct");
+    } else {
+        alert("Wrong");
+    }
+    index++;
+    nextQuestion();
+});
+
+buttonc.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (buttonc.textContent === currentQuestion.correctAnswer) {
+        alert("Correct");
+    } else {
+        alert("Wrong");
+    }
+    index++;
+    nextQuestion();
+});
+
+buttond.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (buttond.textContent === currentQuestion.correctAnswer) {
+        alert("Correct");
+    } else {
+        alert("Wrong");
+    }
+    index++;
+    nextQuestion();
+});
+
 // WHEN I answer a question incorrectly
 
 

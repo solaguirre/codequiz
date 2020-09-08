@@ -26,20 +26,12 @@
         <h4 class="time"></h4>
     </div>
 
-    <!-- Added jumbotron, with initial home text -->
-    <main id="quiz" class="jumbotron text-center">
-        <div class="container">
-            <h1 class="display-4">Reggaeton, ya tu sabe!</h1>
-            <p class="lead">This quiz will test your knowledge of the latest Reggaetoneros and their songs. </p>
-            <hr class="my-4">
-            <p>Click on the button to start.</p>
-            <a id="start" class="btn btn-primary btn-lg" role="button">Leggo!</a>
-        </div>
-        <br>
 
+    <!-- Added jumbotron, with initial home text -->
+    <main>
         <!-- quiz container, should I have it within jumbotron? below, display: none makes it dissapear, how do i make it reappear when quiz starts? -->
         <div id="quiz-container"></div>
-        <div style="display: none">
+        <div id= "quiz-buttons" style="display: none">
             <div class="row">
 
                 <div class="container">
@@ -57,17 +49,23 @@
                         <button id="buttond" type="button" class="btn btn-secondary btn-lg">d</button>
                     </div>
 
-
-
                     <div id="results"></div>
-
 
                 </div>
             </div>
     </main>
 
+    <div id="main-jumbotron" class="jumbotron text-center">
+        <div class="container">
+            <h1 class="display-4">Reggaeton, ya tu sabe!</h1>
+            <p class="lead">This quiz will test your knowledge of the latest Reggaetoneros and their songs. </p>
+            <hr class="my-4">
+            <p>Click on the button to start.</p>
+            <a id="start" class="btn btn-primary btn-lg" role="button">Leggo!</a>
+        </div>
+        <br>
 
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>
