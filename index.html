@@ -21,17 +21,17 @@
 <body>
 
     <!-- timer -->
+    <div>
+        <div class="col text-right">
+            <h4 class="time"></h4>
+        </div>
     </div>
-    <div class="col text-right">
-        <h4 class="time"></h4>
-    </div>
-
 
     <!-- Added jumbotron, with initial home text -->
     <main>
         <!-- quiz container, should I have it within jumbotron? below, display: none makes it dissapear, how do i make it reappear when quiz starts? -->
         <div id="quiz-container"></div>
-        <div id= "quiz-buttons" style="display: none">
+        <div id="quiz-buttons" style="display: none">
             <div class="row">
 
                 <div class="container">
@@ -47,12 +47,15 @@
                         <button id="buttonc" type="button" class="btn btn-secondary btn-lg">c</button>
                         <br>
                         <button id="buttond" type="button" class="btn btn-secondary btn-lg">d</button>
-                    </div>
+                        <br>
 
-                    <div id="results"></div>
+
+                    </div>
 
                 </div>
             </div>
+
+
     </main>
 
     <div id="main-jumbotron" class="jumbotron text-center">
@@ -64,8 +67,17 @@
             <a id="start" class="btn btn-primary btn-lg" role="button">Leggo!</a>
         </div>
         <br>
+    </div>
 
-        <script src="script.js"></script>
+    <div class="row justify-content-center" style="display: none;">
+        <div class="col text-center">
+            <h3 id="results">Your Score is <span id="final-score"><span></h3>
+        </div>
+        <input type=text id="myInitials" value="Write your initials here...">
+        <div id="enter" type="button" class="btn btn-secondary btn-lg" style="display: none">Submit</div>
+
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
