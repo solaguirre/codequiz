@@ -1,9 +1,19 @@
-# codequiz Reggaeton Music Quiz
+# Quiz Reggaeton Music Quiz
 
 ## Objective
 AS A coding bootcamp student
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 SO THAT I can gauge my progress compared to my peers
+
+## Created With
+
+* HTML
+* CSS
+* Bootstrap
+
+# About the project
+
+
 
 ### This is what the Quiz looks like in Screen Shots
 
