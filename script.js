@@ -8,22 +8,20 @@ const button4 = document.querySelector("#buttond");
 const timeEl = document.querySelector(".time");
 const startButton = document.querySelector("#start");
 const submitButton = document.querySelector("#enter")
-const logInitials = document.querySelector("#logInitials");
+let logInitials = document.querySelector("#myInitials");
 
 const finalScore = document.querySelector(".time");
 
-
 // Click on a button and quiz starts, timer starts and I am presented with a question
 startButton.addEventListener("click", function () {
-    setTime();
+    setTimeout();
     document.querySelector("#main-jumbotron").style.display = "none";
     document.querySelector("#quiz-buttons").removeAttribute("style");
     nextQuestion();
 })
-
 let secondsLeft = 60;
 
-function setTime(end) {
+function setTimeout(end) {
 
     let timerInterval = setInterval(function () {
         secondsLeft--;
@@ -37,16 +35,12 @@ function setTime(end) {
 
 console.log(secondsLeft);
 
-
-function buildQuiz() {
-
-}
 // quizQUESTIONS
 
 let quizQuestions = [
 
     {
-        question: "What country is JBalvin from?",
+        questions: "What country is JBalvin from?",
         answers: {
             buttona: 'Colombia',
             buttonb: 'Panama',
@@ -56,7 +50,7 @@ let quizQuestions = [
         correctAnswer: 'Colombia'
     },
     {
-        question: "Which OG Reggaetonero is referred to as 'El Abayarde'?",
+        questions: "Which OG Reggaetonero is referred to as 'El Abayarde'?",
         answers: {
             buttona: 'Bad Bunny',
             buttonb: 'Don Omar',
@@ -67,7 +61,7 @@ let quizQuestions = [
     },
 
     {
-        question: "Which Reggaetonero is featured on Aventura's song 'Ella y Yo'?",
+        questions: "Which Reggaetonero is featured on Aventura's song 'Ella y Yo'?",
         answers: {
             buttona: 'Tito "El Bambino"',
             buttonb: 'Don Omar',
@@ -77,7 +71,7 @@ let quizQuestions = [
         correctAnswer: 'Don Omar'
     },
     {
-        question: "Which Reggaetonera sings on 'Quiero Bailar'?",
+        questions: "Which Reggaetonera sings on 'Quiero Bailar'?",
         answers: {
             buttona: 'Maluma',
             buttonb: 'Becky G',
@@ -87,7 +81,7 @@ let quizQuestions = [
         correctAnswer: 'Ivy Queen'
     },
     {
-        question: "In what year was Daddy Yankees hit song 'Gasolina' released?",
+        questions: "In what year was Daddy Yankees hit song 'Gasolina' released?",
         answers: {
             buttona: '2006',
             buttonb: '2003',
@@ -116,8 +110,8 @@ let renderQuizEl = document.querySelector("#quizQuestions");
 
 function nextQuestion() {
     currentQuestion = quizQuestions[index]
-    console.log(currentQuestion, index, currentQuestion.question);
-    questions.textContent = currentQuestion.question;
+    // console.log(currentQuestion, index, currentQuestion.question);
+    questions.textContent = currentQuestion.questions;
     buttona.textContent = currentQuestion.answers.buttona;
     buttonb.textContent = currentQuestion.answers.buttonb;
     buttonc.textContent = currentQuestion.answers.buttonc;
@@ -184,44 +178,28 @@ buttond.addEventListener("click", function (event) {
     }
     index++;
     if (index === quizQuestions.length) {
-        document.querySelector("#enter").removeAttribute("style");
-        document.querySelector("#quiz-container").removeAttribute("style");
-        console.log(secondsLeft);
         quizEnd();
-
     }
     else {
         nextQuestion();
     }
-
 });
 
-startButton.addEventListener("click", function () {
-    setTime();
 
-    nextQuestion();
-})
-
-let showResults = document.querySelector("#enter");
-
-submitButton.addEventListener("click", function () {
-    clearInterval(secondsLeft);
-    document.querySelector("#enter").removeAttribute("style");
-    document.querySelector("#quiz-container").removeAttribute("style");
-    quizEnd();
-})
 
 function quizEnd() {
-    clearInterval(setTime);
-    document.querySelector("#results").removeAttribute("style");
-    document.querySelector("#quiz-container").removeAttribute("style");
+    clearInterval(setTimeout);
     finalScore.textContent = "time left: " + secondsLeft;
-}
+    document.querySelector("#quiz-container").setAttribute("style", "display: none;");
+};
+
+quizEnd();
 
 //function to save initials and score to local storage
+let highScores = 60;
 
 function initialsSave() {
-    const initials = document.querySelector("#logInitials");
+    const initials = document.querySelector("#myInitials");
     let initializer = intitials.value.trim();
     if (initializer !== "") {
 
@@ -230,29 +208,13 @@ function initialsSave() {
         let newScore = {
             score: secondsLeft,
             initials: initializer,
-
         }
-
         highScores.push(newScore);
         window.localStorage.setItem("high-scores", JSON.stringify(highScores));
-
-
     }
 
-
-}
-
+};
 submitButton.onclick = initialsSave;
-
-
-// startButton.addEventListener("click", function () {
-//     setTime();
-//     document.querySelector("#main-jumbotron").style.display = "none";
-//     document.querySelector("#quiz-buttons").removeAttribute("style");
-//     nextQuestion();
-// })
-
-// function initials()
 
 // WHEN I answer a question incorrectly
 
