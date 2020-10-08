@@ -14,14 +14,13 @@ SO THAT I can gauge my progress compared to my peers
 
 [![Screen-Shot-2020-09-09-at-11-53-55-PM.png](https://i.postimg.cc/XJ1bQgwY/Screen-Shot-2020-09-09-at-11-53-55-PM.png)](https://postimg.cc/FdS8K3WM)
 
-## Contact Me
 
 ### Marisol Aguirre
 
-* Junior Full Stack Developer - UA Coding Bootcamp
+## Contact Me
 
-* Contact: soulaguirre@gmail.com
+* [Junior Full Stack Developer - UA Coding Bootcamp](#updated-portfolio)
+* [GitHub Profile](https://github.com/solaguirre)
+* [E-mail](soulaguirre@gmail.com)
+* [Project link](https://solaguirre.github.io/codequiz/)
 
-* GitHub: https://github.com/solaguirre
-
-Project Link: https://solaguirre.github.io/codequiz/
