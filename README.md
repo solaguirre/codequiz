@@ -13,3 +13,15 @@ SO THAT I can gauge my progress compared to my peers
 ### Quiz Questions with Timer
 
 [![Screen-Shot-2020-09-09-at-11-53-55-PM.png](https://i.postimg.cc/XJ1bQgwY/Screen-Shot-2020-09-09-at-11-53-55-PM.png)](https://postimg.cc/FdS8K3WM)
+
+## Contact Me
+
+### Marisol Aguirre
+
+* Junior Full Stack Developer - UA Coding Bootcamp
+
+* Contact: soulaguirre@gmail.com
+
+* GitHub: https://github.com/solaguirre
+
+Project Link: https://solaguirre.github.io/codequiz/
