@@ -13,6 +13,7 @@ SO THAT I can gauge my progress compared to my peers
 
 # About the project
 
+The purpose of this project was to create a quiz using the code we have learned so far. I chose to do a quiz qith a Reggaeton music theme. I think Reggaeton music is very popular at the moment and it is a fun theme. 
 
 
 ### This is what the Quiz looks like in Screen Shots
